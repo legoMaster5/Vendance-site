@@ -4,7 +4,7 @@ body {
     font-size: 1.5em;
     color: #fff;
 
-    background: url("bg.jpg");
+    background: url("images/bg.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
