@@ -8,6 +8,7 @@ const works = document.querySelector('#works');
 const inspiration = document.querySelector('#inspiration');
 const linksPage = document.querySelector('#linkPage');
 
+const site = document.querySelector('.site');
 
 main_link.addEventListener('click', () => {
     info.className = '';
@@ -36,3 +37,29 @@ links_link.addEventListener('click', () => {
     inspiration.className = 'inactive';
     linksPage.className = '';
 })
+
+const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Lolor', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
+const buttons = document.querySelectorAll('.actionBtn');
+const audio = document.querySelector('audio');
+let isPlaying = 0;
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        console.log(btn.id);
+        console.log(isPlaying)
+        if(isPlaying == 0) {
+            isPlaying = 1;
+            btn.style.backgroundImage = "url(images/pause.png)";
+            audio.src = `music/${music[btn.id]}.mp3`;
+            audio.play();
+        }
+        else if(isPlaying == 1) {
+            isPlaying = 0;
+            btn.style.backgroundImage = "url(images/play.png)";
+            audio.pause()
+        }
+    });
+});
+
+
+

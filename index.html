@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <audio></audio>
       <div class="site">
         <header>
           <div class="name">
@@ -31,34 +32,68 @@
               <div class="albums">
                 <div class="track track1">
                   <img class="img track1" src="images/track1.jpg">
-                  <button type="button">+</button>
+                  <input type="button" class="actionBtn" id="0">
                 </div>
                 <div class="track track2">
                   <img class="img track2" src="images/track2.jpg">
-                  <button type="button">+</button>
+                  <input type="button" class="actionBtn" id="1">
                 </div>
                 <div class="track track3">
                   <img class="img track3" src="images/track1.jpg">
-                  <button type="button">+</button>
+                  <input type="button" class="actionBtn" id="2">
                 </div>
               </div>
               <div class="equalizer">equalizer</div>
             </div>
             <div class="telegram">
-              <img class="icon tg" src="images/tg.jpeg">
+              <img class="icon tgMain" src="images/tg.jpeg">
               <p class="text">Телеграм канал</p>
             </div>
           </main>
         </div>
 
         <div class="inactive" id="works">
-          <p>1</p>
-          <p>2</p>
+          <div class="worksContainer">
+            <div class="work w1">
+              <input type="button" class="actionBtn" id="3">
+              <p>Driving</p>
+            </div>
+            <div class="work w2">
+              <input type="button" class="actionBtn" id="4">
+              <p>The Stream Hardphonk</p>
+            </div>
+            <div class="work w3">
+              <input type="button" class="actionBtn" id="5">
+              <p>Liquid</p>
+            </div>
+            <div class="work w4">
+              <input type="button" class="actionBtn" id="6">
+              <p>Lolor</p>
+            </div>
+            <div class="work w5">
+              <input type="button" class="actionBtn" id="7">
+              <p>Pervasion</p>
+            </div>
+            <div class="work w6">
+              <input type="button" class="actionBtn" id="8">
+              <p>Space</p>
+            </div>
+            <div class="work w7">
+              <input type="button" class="actionBtn" id="9">
+              <p>Tear down</p>
+            </div>
+            <div class="work w8">
+              <input type="button" class="actionBtn" id="10">
+              <p>Worldtrip</p>
+            </div>
+          </div>
         </div>
 
-        <div class="inactive" id="inspiration">
-          <p>fasfsadf</p>
-          <p>asdfsadasd</p>
+        <div class="inactive " id="inspiration">
+          <div class="inspirationContainer">
+            <p>fasfsadf</p>
+            <p>asdfsadasd</p>
+          </div>
         </div>
 
         <div class="inactive" id="linkPage">
@@ -68,7 +103,11 @@
               <img class="imgLink" src="images/qr1.png">
               <p>Telegram</p>
             </div>
-            <div class="SC">
+            <div class="yt">
+              <img class="imgLink" src="images/qr1.png">
+              <p>YouTube</p>
+            </div>
+            <div class="sc">
               <img class="imgLink" src="images/qr1.png">
               <p>SoundCloud</p>
             </div>
@@ -79,8 +118,6 @@
           <p class="author">Автор: lego master</p>
           <p>2024 год</p>
         </footer>
-      </div>
-
       </div>
   </body>
   <script src="script.js"></script>
