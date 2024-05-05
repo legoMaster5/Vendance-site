@@ -10,38 +10,26 @@ const linksPage = document.querySelector('#linkPage');
 
 const site = document.querySelector('.site');
 
-main_link.addEventListener('click', () => {
-    info.className = '';
-    works.className = 'inactive';
-    inspiration.className = 'inactive';
-    linksPage.className = 'inactive';
-})
-
-works_link.addEventListener('click', () => {
-    info.className = 'inactive';
-    works.className = '';
-    inspiration.className = 'inactive';
-    linksPage.className = 'inactive';
-})
-
-inspiration_link.addEventListener('click', () => {
-    info.className = 'inactive';
-    works.className = 'inactive';
-    inspiration.className = '';
-    linksPage.className = 'inactive';
-})
-
-links_link.addEventListener('click', () => {
-    info.className = 'inactive';
-    works.className = 'inactive';
-    inspiration.className = 'inactive';
-    linksPage.className = '';
-})
-
 const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Lolor', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
 const buttons = document.querySelectorAll('.actionBtn');
 const audio = document.querySelector('audio');
 let isPlaying = 0;
+
+const links = document.querySelectorAll('.link');
+let targetID;
+
+links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        targetID = link.getAttribute('href');
+        document.querySelector(targetID).scrollIntoView(
+            {
+                behavior: 'smooth',
+                block: 'start'
+            }
+        )
+    })
+})
 
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
