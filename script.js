@@ -10,7 +10,7 @@ const linksPage = document.querySelector('#linkPage');
 
 const site = document.querySelector('.site');
 
-const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Lolor', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
+const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
 const buttons = document.querySelectorAll('.actionBtn');
 const audio = document.querySelector('audio');
 
@@ -31,17 +31,14 @@ links.forEach((link) => {
 })
 
 buttons.forEach((btn) => {
-    btn.style.backgroundImage = "url(images/play.png)";
     btn.addEventListener('click', () => {
-        console.log(btn.id);
-        audio.pause();
         buttons.forEach((btn) => btn.style.backgroundImage = "url(images/play.png)");
         if (audio.paused) {
             btn.style.backgroundImage = "url(images/pause.png)";
             audio.src = `music/${music[btn.id]}.mp3`;
             audio.play();
         }
-        else {
+        if (!audio.paused) {
             btn.style.backgroundImage = "url(images/play.png)";
             audio.pause()
         }

@@ -29,7 +29,6 @@ header {
 }
 
 .icon {
-    display: none;
     width: 30vh; height: 30vh;
     border-radius: 10px;
 }
@@ -166,6 +165,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {
