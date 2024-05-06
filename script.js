@@ -13,7 +13,6 @@ const site = document.querySelector('.site');
 const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Lolor', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
 const buttons = document.querySelectorAll('.actionBtn');
 const audio = document.querySelector('audio');
-let isPlaying = 0;
 
 const links = document.querySelectorAll('.link');
 let targetID;
@@ -32,17 +31,17 @@ links.forEach((link) => {
 })
 
 buttons.forEach((btn) => {
+    btn.style.backgroundImage = "url(images/play.png)";
     btn.addEventListener('click', () => {
         console.log(btn.id);
-        console.log(isPlaying)
-        if(isPlaying == 0) {
-            isPlaying = 1;
+        audio.pause();
+        buttons.forEach((btn) => btn.style.backgroundImage = "url(images/play.png)");
+        if (audio.paused) {
             btn.style.backgroundImage = "url(images/pause.png)";
             audio.src = `music/${music[btn.id]}.mp3`;
             audio.play();
         }
-        else if(isPlaying == 1) {
-            isPlaying = 0;
+        else {
             btn.style.backgroundImage = "url(images/play.png)";
             audio.pause()
         }
@@ -51,3 +50,17 @@ buttons.forEach((btn) => {
 
 
 
+// console.log(btn.id);
+// console.log(isPlaying)
+// if(isPlaying == 0) {
+//     audio.pause()
+//     isPlaying = 1;
+//     btn.style.backgroundImage = "url(images/pause.png)";
+//     audio.src = `music/${music[btn.id]}.mp3`;
+//     audio.play();
+// }
+// else if(isPlaying == 1) {
+//     isPlaying = 0;
+//     btn.style.backgroundImage = "url(images/play.png)";
+//     audio.pause()
+// }
