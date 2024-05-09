@@ -17,6 +17,20 @@ const audio = document.querySelector('audio');
 const links = document.querySelectorAll('.link');
 let targetID;
 
+let play = "", pause = "";
+
+const media = window.matchMedia('(max-width: 1080px)')
+
+if (media.matches) {
+    play = "url(images/playMobile.png)";
+    pause = "url(images/pauseMobile.png)";
+} else {
+    play = "url(images/play.png)";
+    pause = "url(images/pause.png)";
+}
+
+console.log(play, pause)
+
 links.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
@@ -32,14 +46,14 @@ links.forEach((link) => {
 
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-        buttons.forEach((btn) => btn.style.backgroundImage = "url(images/play.png)");
+        buttons.forEach((btn) => btn.style.backgroundImage = play);
         if (audio.paused) {
-            btn.style.backgroundImage = "url(images/pause.png)";
+            btn.style.backgroundImage = pause;
             audio.src = `music/${music[btn.id]}.mp3`;
             audio.play();
         }
         else if (!audio.paused) {
-            btn.style.backgroundImage = "url(images/play.png)";
+            btn.style.backgroundImage = play;
             audio.pause()
         }
     });

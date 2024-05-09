@@ -29,7 +29,7 @@ header {
 }
 
 .icon {
-    display: none;
+    display: flex;
     width: 30vh; height: 30vh;
     border-radius: 10px;
 }
@@ -110,7 +110,7 @@ main {
 }
 
 .track {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -200,7 +200,18 @@ footer {
     .text {
         width: 60%;
     }
-
+    .actionBtn {
+        width: 100px; height: 100px;
+        background: url("images/playMobile.png");
+    }
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .telegram {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .albums {
         width: 60vw;
         display: flex;
