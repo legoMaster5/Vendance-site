@@ -25,7 +25,7 @@ header {
 }
 
 #mainInfo {
-    padding: 100px 0 0 0;
+    padding: 15vh 0 0 0;
 }
 
 .icon {
@@ -63,7 +63,7 @@ header {
 }
 
 .avatarHeader {
-    height: 80px; width: 80px;
+    height: 7vh; width: 7vh;
     padding: 10px;
     border-radius: 50%;
 }
@@ -149,6 +149,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
 }
 
 #inspiration {
@@ -186,10 +187,27 @@ footer {
     align-items: center;
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1080px) {
+    body {
+        font-size: 2em;
+    }
+    header {
+        height: 20vh;
+    }
+    #mainInfo {
+        padding: 20vh 0 0 0;
+    }
+    .text {
+        width: 60%;
+    }
+
     .albums {
         width: 60vw;
         display: flex;
         flex-wrap: wrap;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
     }
 }
