@@ -38,26 +38,9 @@ buttons.forEach((btn) => {
             audio.src = `music/${music[btn.id]}.mp3`;
             audio.play();
         }
-        if (!audio.paused) {
+        else if (!audio.paused) {
             btn.style.backgroundImage = "url(images/play.png)";
             audio.pause()
         }
     });
 });
-
-
-
-// console.log(btn.id);
-// console.log(isPlaying)
-// if(isPlaying == 0) {
-//     audio.pause()
-//     isPlaying = 1;
-//     btn.style.backgroundImage = "url(images/pause.png)";
-//     audio.src = `music/${music[btn.id]}.mp3`;
-//     audio.play();
-// }
-// else if(isPlaying == 1) {
-//     isPlaying = 0;
-//     btn.style.backgroundImage = "url(images/play.png)";
-//     audio.pause()
-// }

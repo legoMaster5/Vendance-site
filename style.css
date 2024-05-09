@@ -6,12 +6,12 @@ body {
     color: #fff;
 
     background: url("images/bg.jpg");
-    background-color: #1b1b1bdc;
     background-attachment: fixed;
     background-size: cover;
 } 
 
 .site {
+    width: 100vw;
     background-color: #1b1b1bdc;
 }
 
@@ -29,6 +29,7 @@ header {
 }
 
 .icon {
+    display: none;
     width: 30vh; height: 30vh;
     border-radius: 10px;
 }
@@ -109,7 +110,7 @@ main {
 }
 
 .track {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -129,11 +130,17 @@ main {
 }
 
 
-.worksContainer {
+#works {
     margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#works h2 {
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0 0 0;
 }
 
 .work {
@@ -181,6 +188,7 @@ footer {
 
 @media(max-width: 900px) {
     .albums {
+        width: 60vw;
         display: flex;
         flex-wrap: wrap;
     }
