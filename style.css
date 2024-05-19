@@ -1,36 +1,35 @@
 body {
-    width: 100vw;
     margin: 0; padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
     color: #fff;
 
-    background: url("images/bg.jpg");
+    background: url(images/bg.jpg);
     background-attachment: fixed;
     background-size: cover;
 } 
 
-.site {
-    width: 100vw;
-    background-color: #1b1b1bdc;
-}
+.site { background-color: #1b1b1bdc; }
 
 header {
-    position: fixed;
-    z-index: 1;
-    background-color: #551A52;
     height: 10vh; width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: #551A52;
 }
 
-.block {
-    padding: 15vh 0 0 0;
-}
+.block { padding: 15vh 0 0 0; }
 
 .icon {
-    display: flex;
+    width: 40vh; height: 40vh;
+    border-radius: 10px;
+}
+
+.qr {
+    margin: 3vh 0;
     width: 30vh; height: 30vh;
     border-radius: 10px;
 }
@@ -39,10 +38,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 40vh; height: 20vh;
     background-color: #551A52;
-    padding: 50px;
+    color: #fff;
     border-radius: 10px;
+}
+
+.link-block {
+    width: 30vh; height: 7vh;
+    background-color: #772473;
 }
 
 .links {
@@ -51,19 +55,16 @@ header {
 }
 
 .link {
-    margin: 0 2em;
     padding: 1em 3em;
-    border: none;
-    background-color: #551A52;
     color: #fff;
-    font-size: 0.8em;
+    font-size: .8em;
 }
 
 .head {
     padding: 0 2em;
 }
 
-.avatarHeader {
+.avatar-header {
     height: 7vh; width: 7vh;
     padding: 10px;
     border-radius: 50%;
@@ -96,10 +97,10 @@ main {
     align-items: center;
 }
 
-.actionBtn {
+.action-btn {
     width: 50px; height: 50px;
     margin: 10px;
-    background: url("images/play.png");
+    background: url(images/play.png);
     border: none;
 }
 
@@ -129,6 +130,10 @@ main {
     justify-content: space-evenly;
 }
 
+.tg-link {
+    display: flex;
+    flex-direction: column;
+}
 
 #works {
     margin: 50px 0;
@@ -166,70 +171,88 @@ main {
     background-color: #1b1b1bdc;
 }
 
+.insp-btn {
+    background-color: #772473;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0;
+    font-size: 1.2em;
+}
+
 .slider {
     width: 800px; height: 500px;
 }
 
-#linkPage p{
+#links-page h2 {
     display: flex;
     justify-content: center;
 }
 
-#linksPage h2 {
-    display: flex;
-    justify-content: center;
-}
-
-.linkContainer {
+.link-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 footer {
     height: 10vh;
-    display: flex;
+    margin: 5vh 0 0;
     font-size: 1em;
     padding: 1em;
     background-color:#2c2c2c;
+    display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
 }
 
-@media(max-width: 1080px) {
+@media (orientation: portrait) and (max-width: 1080px){
     body {
         font-size: 2em;
     }
+
     header {
         height: 20vh;
     }
-    #mainInfo {
+
+    #main-info {
         padding: 20vh 0 0 0;
     }
+
+    .icon {
+        width: 30vh; height: 30vh;
+    }
+
     .text {
         width: 60%;
     }
-    .actionBtn {
+
+    .action-btn {
         width: 100px; height: 100px;
-        background: url("images/playMobile.png");
+        background: url(images/playMobile.png);
     }
+
     .about {
         display: flex;
         flex-wrap: wrap;
     }
+
     .telegram {
         display: flex;
         flex-wrap: wrap;
     }
+
     .albums {
         width: 60vw;
         display: flex;
         flex-wrap: wrap;
     }
+
     .links {
         display: flex;
         flex-direction: column;
     }
+
 }

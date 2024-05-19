@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
     <title>Vendance</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -11,21 +10,21 @@
       <div class="site">
         <header>
           <div class="name">
-            <img class="head avatarHeader" src="images/icon1.jpeg">
+            <img class="head avatar-header" src="images/icon1.jpeg">
             <p class="head">Vendance</p>
           </div>
           <div class="links">
-            <a href="#mainInfo" class="link mainLink">Главное</a>
-            <a href="#works" class="link worksLink">Работы</a>
-            <a href="#inspiration" class="link inspirationLink">Вдохновление</a>
-            <a href="#linksPage" class="link linksLink">Ссылки</a>
+            <a href="#main-info" class="link">Главное</a>
+            <a href="#works" class="link">Работы</a>
+            <a href="#inspiration" class="link">Вдохновление</a>
+            <a href="#links-page" class="link">Ссылки</a>
           </div>
         </header>
 
-        <div id="mainInfo" class="block">
+        <div id="main-info" class="block">
           <main>
             <div class="about">
-              <img class="icon avatarMain" src="images/icon2.jpeg">
+              <img class="icon avatar-main" src="images/icon2.jpeg">
               <p class="text"> Информация об авторе</p>
             </div>
             <div class="music">
@@ -33,21 +32,24 @@
               <div class="albums">
                 <div class="track track1">
                   <img class="img track1" src="images/track1.jpg">
-                  <input type="button" class="actionBtn" id="0">
+                  <input type="button" class="action-btn" id="0">
                 </div>
                 <div class="track track2">
                   <img class="img track2" src="images/track2.jpg">
-                  <input type="button" class="actionBtn" id="1">
+                  <input type="button" class="action-btn" id="1">
                 </div>
                 <div class="track track3">
                   <img class="img track3" src="images/track1.jpg">
-                  <input type="button" class="actionBtn" id="2">
+                  <input type="button" class="action-btn" id="2">
                 </div>
               </div>
             </div>
             <div class="telegram">
               <img class="icon" src="images/tg.jpeg">
-              <p class="text">Телеграм канал</p>
+              <div class="tg-link">
+                <a class="link-block text" href="https://t.me/V_dancewav">Телеграм канал</a>
+                <img class="qr" src="images/qr1.png">
+              </div>
             </div>
           </main>
         </div>
@@ -55,31 +57,31 @@
         <div id="works" class="block">
           <h2>Все треки</h2>
             <div class="work w1">
-              <input type="button" class="actionBtn" id="0">
+              <input type="button" class="action-btn" id="0">
               <p>Driving</p>
             </div>
             <div class="work w2">
-              <input type="button" class="actionBtn" id="1">
+              <input type="button" class="action-btn" id="1">
               <p>The Stream Hardphonk</p>
             </div>
             <div class="work w3">
-              <input type="button" class="actionBtn" id="2">
+              <input type="button" class="action-btn" id="2">
               <p>Liquid</p>
             </div>
             <div class="work w4">
-              <input type="button" class="actionBtn" id="3">
+              <input type="button" class="action-btn" id="3">
               <p>Pervasion</p>
             </div>
             <div class="work w5">
-              <input type="button" class="actionBtn" id="4">
+              <input type="button" class="action-btn" id="4">
               <p>Space</p>
             </div>
             <div class="work w6">
-              <input type="button" class="actionBtn" id="5">
+              <input type="button" class="action-btn" id="5">
               <p>Tear down</p>
             </div>
             <div class="work w7">
-              <input type="button" class="actionBtn" id="6">
+              <input type="button" class="action-btn" id="6">
               <p>Worldtrip</p>
             </div>
         </div>
@@ -87,45 +89,43 @@
         <div id="inspiration" class="block">
           <h2>Вдохновение</h2>
           <div class="paragraph">
-            <p>fasfsadf</p>
-            <p>asdfsadasd</p>
             <div class="images">
-              <div><a href=""><img class="slider" src="images/1.jpg" alt=""></a></div>
-              <div><a href=""><img class="slider" src="images/2.jpg" alt=""></a></div>
-              <div><a href=""><img class="slider" src="images/3.jpg" alt=""></a></div>
-              <div><a href=""><img class="slider" src="images/4.webp" alt=""></a></div>
-              <div><a href=""><img class="slider" src="images/5.jpg" alt=""></a></div>
-              <div><a href=""><img class="slider" src="images/6.jpg" alt=""></a></div>
+              <div><a href=""><img title="Поп музыка, Twenty one pilots" class="slider" src="images/1.jpg" alt=""></a></div>
+              <div><a href=""><img title="Поп музыка, Michael Jackson" class="slider" src="images/2.jpg" alt=""></a></div>
+              <div><a href=""><img title="Поп музыка, Stromae" class="slider" src="images/3.jpg" alt=""></a></div>
+              <div><a href=""><img title="R&B, the weekend" class="slider" src="images/4.webp" alt=""></a></div>
+              <div><a href=""><img title="Электоронная музыка, Skrillex" class="slider" src="images/5.jpg" alt=""></a></div>
+              <div><a href=""><img title="Phonk, DVRST" class="slider" src="images/6.jpg" alt=""></a></div>
             </div>
           </div>
+          <input type="button" class="insp-btn text" value="Остальные авторы">
         </div>
 
-        <div id="linksPage" class="block">
+        <div id="links-page" class="block">
           <h2>Ссылки</h2>
-          <div class="linkContainer">
+          <div class="link-container">
             <div class="tg">
-              <img class="icon imgLink" src="images/qr1.png">
+              <img class="qr" src="images/qr1.png">
               <p>Telegram</p>
             </div>
             <div class="yt">
-              <img class="icon imgLink" src="images/qr1.png">
+              <img class="qr" src="images/qr2.png">
               <p>YouTube</p>
             </div>
             <div class="sc">
-              <img class="icon imgLink" src="images/qr1.png">
+              <img class="qr" src="images/qr3.png">
               <p>SoundCloud</p>
             </div>
           </div>
         </div>
-
         <footer>
-          <p class="author">Автор: lego master</p>
+          <p>Автор: lego master</p>
           <p>2024 год</p>
         </footer>
       </div>
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="anime.js"></script>
   <script src="script.js"></script>
 </html>
