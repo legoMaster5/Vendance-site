@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Vendance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -21,7 +22,7 @@
           </div>
         </header>
 
-        <div id="mainInfo">
+        <div id="mainInfo" class="block">
           <main>
             <div class="about">
               <img class="icon avatarMain" src="images/icon2.jpeg">
@@ -51,7 +52,7 @@
           </main>
         </div>
 
-        <div id="works">
+        <div id="works" class="block">
           <h2>Все треки</h2>
             <div class="work w1">
               <input type="button" class="actionBtn" id="0">
@@ -83,15 +84,23 @@
             </div>
         </div>
 
-        <div id="inspiration">
+        <div id="inspiration" class="block">
           <h2>Вдохновение</h2>
           <div class="paragraph">
             <p>fasfsadf</p>
             <p>asdfsadasd</p>
+            <div class="images">
+              <div><a href=""><img class="slider" src="images/1.jpg" alt=""></a></div>
+              <div><a href=""><img class="slider" src="images/2.jpg" alt=""></a></div>
+              <div><a href=""><img class="slider" src="images/3.jpg" alt=""></a></div>
+              <div><a href=""><img class="slider" src="images/4.webp" alt=""></a></div>
+              <div><a href=""><img class="slider" src="images/5.jpg" alt=""></a></div>
+              <div><a href=""><img class="slider" src="images/6.jpg" alt=""></a></div>
+            </div>
           </div>
         </div>
 
-        <div id="linksPage">
+        <div id="linksPage" class="block">
           <h2>Ссылки</h2>
           <div class="linkContainer">
             <div class="tg">
@@ -115,6 +124,8 @@
         </footer>
       </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="anime.js"></script>
   <script src="script.js"></script>
 </html>

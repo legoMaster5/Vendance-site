@@ -29,7 +29,6 @@ if (media.matches) {
     pause = "url(images/pause.png)";
 }
 
-console.log(play, pause)
 
 links.forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -57,4 +56,8 @@ buttons.forEach((btn) => {
             audio.pause()
         }
     });
+});
+
+$(document).ready(() => {
+    $('.images').bxSlider({});
 });
