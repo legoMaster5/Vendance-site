@@ -133,6 +133,7 @@ main {
 .tg-link {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #works {
@@ -145,7 +146,6 @@ main {
 #works h2 {
     display: flex;
     justify-content: center;
-    padding: 5vh 0 0 0;
 }
 
 .work {
@@ -196,6 +196,12 @@ main {
     text-align: center;
 }
 
+.link-container a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
 footer {
     height: 10vh;
     margin: 5vh 0 0;
@@ -216,6 +222,8 @@ footer {
     header {
         height: 20vh;
     }
+
+    .block { padding: 5vh 0 0 0; }
 
     #main-info {
         padding: 20vh 0 0 0;
@@ -239,9 +247,18 @@ footer {
         flex-wrap: wrap;
     }
 
+    .link-block {
+        text-wrap: nowrap;
+        padding: 0 3vh;
+    }
+
     .telegram {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .tg-link {
+        margin: 2vh 0 0 0;
     }
 
     .albums {
@@ -254,5 +271,7 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+    .qr { display: none; }
 
 }

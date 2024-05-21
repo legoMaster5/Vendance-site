@@ -14,7 +14,9 @@ let targetID;
 
 let play = "", pause = "";
 
-const media = window.matchMedia('(max-width: 1080px)')
+const media = window.matchMedia('(max-width: 1080px)');
+
+screen.lockOrientation("portain");
 
 if (media.matches) {
     play = 'url(images/playMobile.png)';
