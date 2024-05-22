@@ -3,11 +3,10 @@ const works = document.querySelector('#works');
 const inspiration = document.querySelector('#inspiration');
 const linksPage = document.querySelector('#link-page');
 
-const site = document.querySelector('.site');
-
 const music = ['Driving', 'The Stream Hardphonk', 'Liquid', 'Pervasion', 'Space', 'Tear down', 'Worldtrip'];
 const buttons = document.querySelectorAll('.action-btn');
 const audio = document.querySelector('audio');
+const inspBtn = document.querySelector('.insp-btn');
 
 const links = document.querySelectorAll('.link');
 let targetID;
@@ -16,7 +15,7 @@ let play = "", pause = "";
 
 const media = window.matchMedia('(max-width: 1080px)');
 
-screen.lockOrientation("portain");
+screen.orientation.lock("portrait");
 
 if (media.matches) {
     play = 'url(images/playMobile.png)';
@@ -54,6 +53,19 @@ buttons.forEach((btn) => {
         }
     });
 });
+
+let isPressed = false;
+
+inspBtn.addEventListener('click', () => {
+    if(isPressed == false) {
+        document.getElementById('list').className = 'list';
+        isPressed = true;
+    }
+    else {
+        document.getElementById('list').className = 'list inactive';
+        isPressed = false;
+    }
+})
 
 $(document).ready(() => {
     $('.images').bxSlider({
