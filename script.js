@@ -9,6 +9,8 @@ const audio = document.querySelector('audio');
 const inspBtn = document.querySelector('.insp-btn');
 
 const links = document.querySelectorAll('.link');
+const qrCodes = document.querySelectorAll('.qr');
+// const images = document.querySelectorAll('.img');
 let targetID;
 
 let play = "", pause = "";
@@ -39,6 +41,18 @@ links.forEach((link) => {
     })
 })
 
+qrCodes.forEach((qr) => {
+    qr.addEventListener('click', () => {
+        location.href = qr.id;
+    })
+})
+
+// images.forEach((img) => {
+//     img.addEventListener('click', () => {
+//         location.href = qr.id;
+//     })
+// })
+
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
         buttons.forEach((btn) => btn.style.backgroundImage = play);
@@ -58,6 +72,12 @@ let isPressed = false;
 
 inspBtn.addEventListener('click', () => {
     if(isPressed == false) {
+        // anime({
+        //     targets: '.anime',
+        //     opacity: [0, 1],
+        //     duration: 20000,
+        //     delay: 3000,
+        // })
         document.getElementById('list').className = 'list';
         isPressed = true;
     }

@@ -35,6 +35,27 @@ header {
     border-radius: 10px;
 }
 
+.qr:hover { 
+    cursor: pointer; 
+    opacity: .7;
+    transform: scale(1.1);
+}
+
+.interections:hover {
+    animation: btn-bouncing 0.5s 1;
+    transform: translate(0, -5px);
+}
+
+@keyframes btn-bouncing {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -5px);
+    }
+}
+
 .text {
     display: flex;
     justify-content: center;
@@ -59,6 +80,14 @@ header {
     padding: 1em 3em;
     color: #fff;
     font-size: .8em;
+    color: #ff87f9;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #2b2c64ea;
+    background-color: #bd41b7;
+    border-radius: 10px;
 }
 
 .head { padding: 0 2em; }
@@ -103,6 +132,11 @@ main {
     border: none;
 }
 
+.action-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .albums {
     display: flex;
     flex-direction: row;
@@ -123,6 +157,10 @@ main {
     border-radius: 5px;
 }
 
+.img:hover {
+    cursor: pointer;
+}
+
 .telegram {
     display: flex;
     flex-direction: row;
@@ -130,13 +168,14 @@ main {
 }
 
 .btn { 
-    background-color: #b637af; 
-    color: #260d88;
+    background-color: #551A52; 
+    color: #ff87f9;
     text-decoration: underline;
 }
 
 .btn:hover {
-    color: black;
+    color: #2b2c64ea;
+    background-color: #bd41b7;
 }
 
 .tg-link {
@@ -200,7 +239,7 @@ main {
 .list h2 {
     padding: .8em 1.5em;
     background-color: #551A52;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .slider { width: 800px; height: 500px; }
@@ -253,6 +292,12 @@ footer {
     .tg-link { margin: 2vh 0 0 0; }
 
     .qr { display: none; }
+
+    .link {
+        background-color: #50204d;
+        margin: .2em;
+        border-radius: 10px;
+    }
 
     .action-btn {
         width: 100px; height: 100px;
