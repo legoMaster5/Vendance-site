@@ -17,7 +17,7 @@ let play = "", pause = "";
 
 const media = window.matchMedia('(max-width: 1080px)');
 
-screen.orientation.lock("portrait");
+document.documentElement.requestFullscreen().then(() => screen.orientation.lock("portrait"));
 
 if (media.matches) {
     play = 'url(images/playMobile.png)';
