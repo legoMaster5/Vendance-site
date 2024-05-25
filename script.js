@@ -17,7 +17,7 @@ let play = "", pause = "";
 
 const media = window.matchMedia('(max-width: 1080px)');
 
-document.documentElement.requestFullscreen().then(() => screen.orientation.lock("portrait"));
+screen.orientation.lock("portrait");
 
 // document.documentElement.requestFullscreen().then(() => screen.orientation.lock("portrait"));
 
@@ -74,12 +74,6 @@ let isPressed = false;
 
 inspBtn.addEventListener('click', () => {
     if(isPressed == false) {
-        // anime({
-        //     targets: '.anime',
-        //     opacity: [0, 1],
-        //     duration: 20000,
-        //     delay: 3000,
-        // })
         document.getElementById('list').className = 'list';
         isPressed = true;
     }
